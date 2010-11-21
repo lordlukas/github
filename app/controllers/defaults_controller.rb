@@ -29,6 +29,9 @@ class DefaultsController < ApplicationController
   # GET /defaults/new.xml
   def new
     @default = Default.new
+if new
+	some_bla
+end
 
     respond_to do |format|
       format.html # new.html.erb

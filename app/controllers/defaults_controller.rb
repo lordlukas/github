@@ -51,7 +51,12 @@ class DefaultsController < ApplicationController
   # POST /defaults.xml
   def create
     @default = Default.new(params[:default])
-
+;#siomae m
+äggsdafsh
+hnanh
+ag
+a
+a
     respond_to do |format|
       if @default.save
         flash[:notice] = 'Default was successfully created.'

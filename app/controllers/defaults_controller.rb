@@ -97,7 +97,9 @@ a
   def destroy
     @default = Default.find(params[:id])
     @default.destroy
-
+if @destroy.save
+  flash[:warning] = "Something is wrong"
+end
     respond_to do |format|
       format.html { redirect_to(defaults_url) }
       format.xml  { head :ok }

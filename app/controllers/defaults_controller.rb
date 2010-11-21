@@ -92,11 +92,15 @@ a
     end
   end
 
-  # DELETE /defaults/1
+  # DELETE /defaults/1 -> klasička
   # DELETE /defaults/1.xml
   def destroy
     @default = Default.find(params[:id])
     @default.destroy
+	@defi = Default.prd
+if @defi == "smrad"
+puts "smrdíme"
+end
 if @destroy.save
   flash[:warning] = "Something is wrong"
 end

@@ -19,6 +19,7 @@ class DefaultsController < ApplicationController
 	if show 
 do souh
 end
+# comment this
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @default }

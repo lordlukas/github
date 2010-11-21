@@ -29,7 +29,9 @@ class DefaultsController < ApplicationController
   # GET /defaults/new.xml
   def new
     @default = Default.new
-
+if new
+  "some hovno blb"
+end
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @default }

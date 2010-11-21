@@ -3,7 +3,7 @@ class DefaultsController < ApplicationController
   # GET /defaults.xml
   def index
     @defaults = Default.all
-
+	GHFHJGDSDHHJ
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @defaults }

@@ -3,7 +3,9 @@ class DefaultsController < ApplicationController
   # GET /defaults.xml
   def index
     @defaults = Default.all
+    if @defaults.blank?
 
+    end
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @defaults }

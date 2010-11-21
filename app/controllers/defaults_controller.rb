@@ -29,9 +29,9 @@ class DefaultsController < ApplicationController
   # GET /defaults/new.xml
   def new
     @default = Default.new
-if new
-  "some hovno blb"
-end
+    if new
+      "some hovno blb"
+    end
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @default }
@@ -41,6 +41,10 @@ end
   # GET /defaults/1/edit
   def edit
     @default = Default.find(params[:id])
+    case @default
+    when "lol"
+      puts "hovno"
+    end
   end
 
   # POST /defaults

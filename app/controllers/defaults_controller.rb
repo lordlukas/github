@@ -56,6 +56,7 @@ class DefaultsController < ApplicationController
 
       redirect_to :stac
     end
+    puts "stuj"
     respond_to do |format|
       if @default.save
         flash[:notice] = 'Default was successfully created.'

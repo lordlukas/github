@@ -16,7 +16,9 @@ class DefaultsController < ApplicationController
   # GET /defaults/1.xml
   def show
     @default = Default.find(params[:id])
-
+    if show
+      "do show ne ? "
+    end
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @default }

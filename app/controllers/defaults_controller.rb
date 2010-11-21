@@ -4,7 +4,7 @@ class DefaultsController < ApplicationController
   def index
     @defaults = Default.all
     if @defaults.blank?
-
+      some
     end
     respond_to do |format|
       format.html # index.html.erb

@@ -41,6 +41,8 @@ end
   # GET /defaults/1/edit
   def edit
     @default = Default.find(params[:id])
+## toto edituje tady něoc
+## a také to posáíle na nedit
   end
 
   # POST /defaults

@@ -1,0 +1,1651 @@
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (105.8ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (278.7ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDefaults (20101019152835)
+  [4;36;1mSQL (130.6ms)[0m   [0;1mCREATE TABLE `defaults` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (33.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101019152835')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `defaults`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `defaults`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateDefaults (20101019152835)
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `defaults`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `defaults`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-19 17:34:59) [GET]
+
+NameError (uninitialized constant DefaultController):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (23.6ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:35:05) [GET]
+  [4;36;1mDefault Load (0.3ms)[0m   [0;1mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+Completed in 31ms (View: 26, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#new (for 127.0.0.1 at 2010-10-19 17:35:08) [GET]
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+Rendering template within layouts/defaults
+Rendering defaults/new
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/defaults/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#create (for 127.0.0.1 at 2010-10-19 17:35:10) [POST]
+  Parameters: {"commit"=>"Create", "default"=>{"name"=>"ahoj"}, "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8="}
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDefault Create (0.3ms)[0m   [0;1mINSERT INTO `defaults` (`name`, `created_at`, `updated_at`) VALUES('ahoj', '2010-10-19 15:35:10', '2010-10-19 15:35:10')[0m
+  [4;35;1mSQL (161.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/defaults/1
+Completed in 177ms (DB: 162) | 302 Found [http://localhost/defaults]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#show (for 127.0.0.1 at 2010-10-19 17:35:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mDefault Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+  [4;36;1mDefault Load (0.3ms)[0m   [0;1mSELECT * FROM `defaults` WHERE (`defaults`.`id` = 1) [0m
+Rendering template within layouts/defaults
+Rendering defaults/show
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/defaults/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:35:13) [GET]
+  [4;36;1mDefault Load (0.3ms)[0m   [0;1mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;35;1mDefault Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#new (for 127.0.0.1 at 2010-10-19 17:35:14) [GET]
+  [4;35;1mDefault Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+Rendering template within layouts/defaults
+Rendering defaults/new
+Completed in 15ms (View: 4, DB: 1) | 200 OK [http://localhost/defaults/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#create (for 127.0.0.1 at 2010-10-19 17:35:17) [POST]
+  Parameters: {"commit"=>"Create", "default"=>{"name"=>"cau"}, "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8="}
+  [4;35;1mDefault Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDefault Create (0.3ms)[0m   [0mINSERT INTO `defaults` (`name`, `created_at`, `updated_at`) VALUES('cau', '2010-10-19 15:35:17', '2010-10-19 15:35:17')[0m
+  [4;36;1mSQL (80.1ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/defaults/2
+Completed in 89ms (DB: 81) | 302 Found [http://localhost/defaults]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#show (for 127.0.0.1 at 2010-10-19 17:35:17) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mDefault Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+  [4;35;1mDefault Load (0.3ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` = 2) [0m
+Rendering template within layouts/defaults
+Rendering defaults/show
+Completed in 8ms (View: 2, DB: 1) | 200 OK [http://localhost/defaults/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:35:18) [GET]
+  [4;35;1mDefault Load (0.3ms)[0m   [0mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;36;1mDefault Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#new (for 127.0.0.1 at 2010-10-19 17:35:19) [GET]
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+Rendering template within layouts/defaults
+Rendering defaults/new
+Completed in 8ms (View: 4, DB: 1) | 200 OK [http://localhost/defaults/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#create (for 127.0.0.1 at 2010-10-19 17:35:21) [POST]
+  Parameters: {"commit"=>"Create", "default"=>{"name"=>"necum"}, "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8="}
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDefault Create (0.3ms)[0m   [0;1mINSERT INTO `defaults` (`name`, `created_at`, `updated_at`) VALUES('necum', '2010-10-19 15:35:21', '2010-10-19 15:35:21')[0m
+  [4;35;1mSQL (77.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/defaults/3
+Completed in 87ms (DB: 78) | 302 Found [http://localhost/defaults]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#show (for 127.0.0.1 at 2010-10-19 17:35:21) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mDefault Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+  [4;36;1mDefault Load (0.3ms)[0m   [0;1mSELECT * FROM `defaults` WHERE (`defaults`.`id` = 3) [0m
+Rendering template within layouts/defaults
+Rendering defaults/show
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/defaults/3]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:35:23) [GET]
+  [4;36;1mDefault Load (0.3ms)[0m   [0;1mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;35;1mDefault Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+Completed in 15ms (View: 10, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#new (for 127.0.0.1 at 2010-10-19 17:35:24) [GET]
+  [4;35;1mDefault Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+Rendering template within layouts/defaults
+Rendering defaults/new
+Completed in 8ms (View: 4, DB: 1) | 200 OK [http://localhost/defaults/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#create (for 127.0.0.1 at 2010-10-19 17:35:26) [POST]
+  Parameters: {"commit"=>"Create", "default"=>{"name"=>"smrdis"}, "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8="}
+  [4;35;1mDefault Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDefault Create (0.2ms)[0m   [0mINSERT INTO `defaults` (`name`, `created_at`, `updated_at`) VALUES('smrdis', '2010-10-19 15:35:26', '2010-10-19 15:35:26')[0m
+  [4;36;1mSQL (85.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/defaults/4
+Completed in 94ms (DB: 87) | 302 Found [http://localhost/defaults]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#show (for 127.0.0.1 at 2010-10-19 17:35:26) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+  [4;35;1mDefault Load (0.3ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` = 4) [0m
+Rendering template within layouts/defaults
+Rendering defaults/show
+Completed in 9ms (View: 3, DB: 1) | 200 OK [http://localhost/defaults/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:35:28) [GET]
+  [4;35;1mDefault Load (0.3ms)[0m   [0mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;36;1mDefault Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+Completed in 19ms (View: 14, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:38:44) [GET]
+  [4;36;1mDefault Load (0.1ms)[0m   [0;1mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+ERROR: compiling _run_erb_app47views47defaults47index46html46erb RAISED compile error
+/home/lukas/NetBeansProjects/test1/app/views/defaults/index.html.erb:22: syntax error, unexpected kENSURE, expecting kEND
+/home/lukas/NetBeansProjects/test1/app/views/defaults/index.html.erb:24: syntax error, unexpected $end, expecting kEND
+Function body:           def _run_erb_app47views47defaults47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Listing defaults</h1>\n\n<table>\n  <tr>\n    <th>Name</th>\n  </tr>\n"
+
+
+
+
+
+;  form_for :to_delete, :url => {:action => :to_delte} do |d| ; @output_buffer.concat "\n"
+;  @defaults.each_with_index do |default| ; @output_buffer.concat "\n  <tr>\n    <td>"
+
+; @output_buffer.concat(( d.check_box default.name.to_sym, default.id ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( d.label  default.name.to_sym ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Show', default ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Edit', edit_default_path(default) ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Destroy', default, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "</td>\n  </tr>\n"
+
+;  end ; @output_buffer.concat "\n</table>\n\n<br />\n\n"
+
+
+
+
+; @output_buffer.concat(( link_to 'New default', new_default_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/lukas/NetBeansProjects/test1/app/views/defaults/index.html.erb:24:in `compile!'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/var/lib/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/lukas/NetBeansProjects/test1/app/controllers/defaults_controller.rb:7:in `index'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/var/lib/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/var/lib/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/var/lib/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+/var/lib/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/lukas/NetBeansProjects/test1/app/views/defaults/index.html.erb:22: syntax error, unexpected kENSURE, expecting kEND
+/home/lukas/NetBeansProjects/test1/app/views/defaults/index.html.erb:24: syntax error, unexpected $end, expecting kEND) on line #22 of app/views/defaults/index.html.erb:
+19: <br />
+20: 
+21: <%= link_to 'New default', new_default_path %>
+
+    app/views/defaults/index.html.erb:24:in `compile!'
+    app/controllers/defaults_controller.rb:7:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (36.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:38:53) [GET]
+  [4;36;1mDefault Load (0.2ms)[0m   [0;1mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;35;1mDefault Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+
+ActionView::TemplateError (undefined method `name' for #<Array:0x7f6982a62aa0>) on line #10 of app/views/defaults/index.html.erb:
+7: <% form_for :to_delete, :url => {:action => :to_delte} do |d| %>
+8: <% @defaults.each_with_index do |default| %>
+9:   <tr>
+10:     <td><%= d.check_box default.name.to_sym, default.id %></td>
+11:     <td><%= d.label  default.name.to_sym %></td>
+12:     <td><%= link_to 'Show', default %></td>
+13:     <td><%= link_to 'Edit', edit_default_path(default) %></td>
+
+    app/views/defaults/index.html.erb:10
+    app/views/defaults/index.html.erb:8:in `each'
+    app/views/defaults/index.html.erb:8:in `each_with_index'
+    app/views/defaults/index.html.erb:8
+    app/views/defaults/index.html.erb:7
+    app/controllers/defaults_controller.rb:7:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (43.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:39:12) [GET]
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+
+ActionView::TemplateError (undefined method `name' for #<Array:0x7f698238f700>) on line #10 of app/views/defaults/index.html.erb:
+7: <% form_for :to_delete, :url => {:action => :to_delte} do |d| %>
+8: <% @defaults.each_with_index do |default| %>
+9:   <tr>
+10:     <td><%= d.check_box default.name, default.id %></td>
+11:     <td><%= d.label  default.name %></td>
+12:     <td><%= link_to 'Show', default %></td>
+13:     <td><%= link_to 'Edit', edit_default_path(default) %></td>
+
+    app/views/defaults/index.html.erb:10
+    app/views/defaults/index.html.erb:8:in `each'
+    app/views/defaults/index.html.erb:8:in `each_with_index'
+    app/views/defaults/index.html.erb:8
+    app/views/defaults/index.html.erb:7
+    app/controllers/defaults_controller.rb:7:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (103.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:39:26) [GET]
+  [4;36;1mDefault Load (0.2ms)[0m   [0;1mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;35;1mDefault Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+
+ActionView::TemplateError (undefined method `name' for #<Array:0x7f6982755880>) on line #10 of app/views/defaults/index.html.erb:
+7: <% form_for :to_delete, :url => {:action => :to_delte} do |d| %>
+8: <% @defaults.each_with_index do |default| %>
+9:   <tr>
+10:     <td><%= d.check_box default.name, default.id %></td>
+11:     <td><%= d.label  default.name %></td>
+12:     <td><%= link_to 'Show', default %></td>
+13:     <td><%= link_to 'Edit', edit_default_path(default) %></td>
+
+    app/views/defaults/index.html.erb:10
+    app/views/defaults/index.html.erb:8:in `each'
+    app/views/defaults/index.html.erb:8:in `each_with_index'
+    app/views/defaults/index.html.erb:8
+    app/views/defaults/index.html.erb:7
+    app/controllers/defaults_controller.rb:7:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (40.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:39:57) [GET]
+  [4;35;1mDefault Load (0.2ms)[0m   [0mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+
+ActionView::TemplateError (undefined method `merge' for 1:Fixnum) on line #10 of app/views/defaults/index.html.erb:
+7: <% form_for :to_delete, :url => {:action => :to_delte} do |d| %>
+8: <% @defaults.each do |default| %>
+9:   <tr>
+10:     <td><%= d.check_box default.name, default.id %></td>
+11:     <td><%= d.label  default.name %></td>
+12:     <td><%= link_to 'Show', default %></td>
+13:     <td><%= link_to 'Edit', edit_default_path(default) %></td>
+
+    app/views/defaults/index.html.erb:10
+    app/views/defaults/index.html.erb:8:in `each'
+    app/views/defaults/index.html.erb:8
+    app/views/defaults/index.html.erb:7
+    app/controllers/defaults_controller.rb:7:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (42.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:39:58) [GET]
+  [4;36;1mDefault Load (0.2ms)[0m   [0;1mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;35;1mDefault Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+
+ActionView::TemplateError (undefined method `merge' for 1:Fixnum) on line #10 of app/views/defaults/index.html.erb:
+7: <% form_for :to_delete, :url => {:action => :to_delte} do |d| %>
+8: <% @defaults.each do |default| %>
+9:   <tr>
+10:     <td><%= d.check_box default.name, default.id %></td>
+11:     <td><%= d.label  default.name %></td>
+12:     <td><%= link_to 'Show', default %></td>
+13:     <td><%= link_to 'Edit', edit_default_path(default) %></td>
+
+    app/views/defaults/index.html.erb:10
+    app/views/defaults/index.html.erb:8:in `each'
+    app/views/defaults/index.html.erb:8
+    app/views/defaults/index.html.erb:7
+    app/controllers/defaults_controller.rb:7:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (98.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:41:10) [GET]
+  [4;35;1mDefault Load (0.2ms)[0m   [0mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+Completed in 26ms (View: 20, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:41:29) [GET]
+  [4;36;1mDefault Load (0.1ms)[0m   [0;1mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;35;1mDefault Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+Completed in 25ms (View: 20, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delte (for 127.0.0.1 at 2010-10-19 17:43:02) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>{"1"=>"1", "2"=>"1", "3"=>"0", "4"=>"0"}}
+
+ActionController::UnknownAction (No action responded to to_delte. Actions: create, destroy, edit, index, new, show, to_delete, and update):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:43:13) [GET]
+  [4;36;1mDefault Load (0.2ms)[0m   [0;1mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;35;1mDefault Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+Completed in 30ms (View: 23, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 17:43:16) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>{"1"=>"0", "2"=>"1", "3"=>"1", "4"=>"0"}}
+Redirected to http://localhost:3000/defaults
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/defaults/to_delete]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:43:16) [GET]
+  [4;36;1mDefault Load (0.1ms)[0m   [0;1mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;35;1mDefault Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+Completed in 25ms (View: 20, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 17:43:38) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>{"1"=>"0", "2"=>"0", "3"=>"0", "4"=>"0"}}
+Redirected to http://localhost:3000/defaults
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/defaults/to_delete]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:43:38) [GET]
+  [4;36;1mDefault Load (0.1ms)[0m   [0;1mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;35;1mDefault Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+Completed in 25ms (View: 19, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:46:31) [GET]
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+Completed in 21ms (View: 16, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 17:46:33) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>{"1"=>"0", "2"=>"0", "3"=>"0", "4"=>"0"}}
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+  [4;35;1mDefault Load (0.3ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` IN (1,0)) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find all Defaults with IDs (1,0) (found 1 results, but was looking for 2)):
+  app/controllers/defaults_controller.rb:87:in `to_delete'
+  app/controllers/defaults_controller.rb:87:in `each'
+  app/controllers/defaults_controller.rb:87:in `map'
+  app/controllers/defaults_controller.rb:87:in `to_delete'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (82.8ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:46:58) [GET]
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+Completed in 21ms (View: 17, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 17:46:59) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>{"1"=>"0", "2"=>"0", "3"=>"0", "4"=>"0"}}
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+  [4;35;1mDefault Load (0.3ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` IN ('1','0')) LIMIT 1[0m
+  [4;36;1mDefault Load (0.2ms)[0m   [0;1mSELECT * FROM `defaults` WHERE (`defaults`.`id` IN ('2','0')) LIMIT 1[0m
+  [4;35;1mDefault Load (0.2ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` IN ('3','0')) LIMIT 1[0m
+  [4;36;1mDefault Load (0.2ms)[0m   [0;1mSELECT * FROM `defaults` WHERE (`defaults`.`id` IN ('4','0')) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDefault Destroy (0.2ms)[0m   [0;1mDELETE FROM `defaults` WHERE `id` = 1[0m
+  [4;35;1mSQL (44.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDefault Destroy (0.2ms)[0m   [0mDELETE FROM `defaults` WHERE `id` = 2[0m
+  [4;36;1mSQL (43.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDefault Destroy (0.2ms)[0m   [0;1mDELETE FROM `defaults` WHERE `id` = 3[0m
+  [4;35;1mSQL (32.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDefault Destroy (0.2ms)[0m   [0mDELETE FROM `defaults` WHERE `id` = 4[0m
+  [4;36;1mSQL (43.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/defaults
+Completed in 176ms (DB: 167) | 302 Found [http://localhost/defaults/to_delete]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:47:00) [GET]
+  [4;36;1mDefault Load (0.3ms)[0m   [0;1mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/defaults]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:47:06) [GET]
+  [4;36;1mDefault Load (0.1ms)[0m   [0;1mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/defaults]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:47:06) [GET]
+  [4;36;1mDefault Load (0.2ms)[0m   [0;1mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/defaults]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:47:07) [GET]
+  [4;36;1mDefault Load (0.1ms)[0m   [0;1mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/defaults]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:47:07) [GET]
+  [4;36;1mDefault Load (0.1ms)[0m   [0;1mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/defaults]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:47:07) [GET]
+  [4;36;1mDefault Load (0.1ms)[0m   [0;1mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/defaults]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:48:11) [GET]
+  [4;36;1mDefault Load (0.3ms)[0m   [0;1mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;35;1mDefault Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+Completed in 27ms (View: 20, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 17:48:15) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>{"1018350795"=>"0", "281110143"=>"0", "298486374"=>"0", "980190962"=>"0", "113629430"=>"1"}}
+  [4;35;1mDefault Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+  [4;36;1mDefault Load (0.3ms)[0m   [0;1mSELECT * FROM `defaults` WHERE (`defaults`.`id` IN ('281110143','0')) LIMIT 1[0m
+  [4;35;1mDefault Load (0.2ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` IN ('1018350795','0')) LIMIT 1[0m
+  [4;36;1mDefault Load (0.2ms)[0m   [0;1mSELECT * FROM `defaults` WHERE (`defaults`.`id` IN ('298486374','0')) LIMIT 1[0m
+  [4;35;1mDefault Load (0.2ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` IN ('980190962','0')) LIMIT 1[0m
+  [4;36;1mDefault Load (0.2ms)[0m   [0;1mSELECT * FROM `defaults` WHERE (`defaults`.`id` IN ('113629430','1')) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDefault Destroy (0.2ms)[0m   [0;1mDELETE FROM `defaults` WHERE `id` = 281110143[0m
+  [4;35;1mSQL (58.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDefault Destroy (0.2ms)[0m   [0mDELETE FROM `defaults` WHERE `id` = 1018350795[0m
+  [4;36;1mSQL (32.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDefault Destroy (0.2ms)[0m   [0;1mDELETE FROM `defaults` WHERE `id` = 298486374[0m
+  [4;35;1mSQL (32.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDefault Destroy (0.2ms)[0m   [0mDELETE FROM `defaults` WHERE `id` = 980190962[0m
+  [4;36;1mSQL (32.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDefault Destroy (0.3ms)[0m   [0;1mDELETE FROM `defaults` WHERE `id` = 113629430[0m
+  [4;35;1mSQL (32.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/defaults
+Completed in 202ms (DB: 192) | 302 Found [http://localhost/defaults/to_delete]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:48:15) [GET]
+  [4;35;1mDefault Load (0.3ms)[0m   [0mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/defaults]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:50:07) [GET]
+  [4;35;1mDefault Load (0.3ms)[0m   [0mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;36;1mDefault Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+Completed in 75ms (View: 68, DB: 3) | 200 OK [http://localhost/defaults]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:51:21) [GET]
+  [4;36;1mDefault Load (3.3ms)[0m   [0;1mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;35;1mDefault Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+
+ActionView::TemplateError (undefined method `merge' for 113629430:Fixnum) on line #10 of app/views/defaults/index.html.erb:
+7: <% form_for :to_delete, :url => {:action => :to_delete} do |d| %>
+8: <% @defaults.each do |default| %>
+9:   <tr>
+10:     <td><%= d.check_box default.name ,default.id %></td>
+11:     <td><%= d.label  default.name %></td>
+12:     <td><%= link_to 'Show', default %></td>
+13:     <td><%= link_to 'Edit', edit_default_path(default) %></td>
+
+    app/views/defaults/index.html.erb:10
+    app/views/defaults/index.html.erb:8:in `each'
+    app/views/defaults/index.html.erb:8
+    app/views/defaults/index.html.erb:7
+    app/controllers/defaults_controller.rb:7:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (40.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:51:22) [GET]
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;36;1mDefault Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+
+ActionView::TemplateError (undefined method `merge' for 113629430:Fixnum) on line #10 of app/views/defaults/index.html.erb:
+7: <% form_for :to_delete, :url => {:action => :to_delete} do |d| %>
+8: <% @defaults.each do |default| %>
+9:   <tr>
+10:     <td><%= d.check_box default.name ,default.id %></td>
+11:     <td><%= d.label  default.name %></td>
+12:     <td><%= link_to 'Show', default %></td>
+13:     <td><%= link_to 'Edit', edit_default_path(default) %></td>
+
+    app/views/defaults/index.html.erb:10
+    app/views/defaults/index.html.erb:8:in `each'
+    app/views/defaults/index.html.erb:8
+    app/views/defaults/index.html.erb:7
+    app/controllers/defaults_controller.rb:7:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (41.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:51:32) [GET]
+  [4;36;1mDefault Load (0.2ms)[0m   [0;1mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;35;1mDefault Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+
+ActionView::TemplateError (undefined method `merge' for 113629430:Fixnum) on line #10 of app/views/defaults/index.html.erb:
+7: <% form_for :to_delete, :url => {:action => :to_delete} do |d| %>
+8: <% @defaults.each do |default| %>
+9:   <tr>
+10:     <td><%= d.check_box default.name ,default.id,"none" %></td>
+11:     <td><%= d.label  default.name %></td>
+12:     <td><%= link_to 'Show', default %></td>
+13:     <td><%= link_to 'Edit', edit_default_path(default) %></td>
+
+    app/views/defaults/index.html.erb:10
+    app/views/defaults/index.html.erb:8:in `each'
+    app/views/defaults/index.html.erb:8
+    app/views/defaults/index.html.erb:7
+    app/controllers/defaults_controller.rb:7:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (100.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:52:12) [GET]
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+Completed in 28ms (View: 23, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 17:52:18) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8="}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.map):
+  app/controllers/defaults_controller.rb:87:in `to_delete'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (26.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 17:52:25) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>["113629430"]}
+  [4;35;1mDefault Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+  [4;36;1mDefault Load (0.4ms)[0m   [0;1mSELECT * FROM `defaults` WHERE (`defaults`.`id` = '113629430') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDefault Destroy (0.2ms)[0m   [0;1mDELETE FROM `defaults` WHERE `id` = 113629430[0m
+  [4;35;1mSQL (37.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/defaults
+Completed in 75ms (DB: 39) | 302 Found [http://localhost/defaults/to_delete]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:52:25) [GET]
+  [4;35;1mDefault Load (0.3ms)[0m   [0mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;36;1mDefault Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+Completed in 71ms (View: 66, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:57:57) [GET]
+  [4;36;1mDefault Load (0.1ms)[0m   [0;1mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;35;1mDefault Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+Completed in 28ms (View: 22, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:57:57) [GET]
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;36;1mDefault Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+Completed in 39ms (View: 33, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:58:28) [GET]
+  [4;36;1mDefault Load (0.1ms)[0m   [0;1mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;35;1mDefault Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+Completed in 48ms (View: 32, DB: 2) | 200 OK [http://localhost/defaults]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 17:58:28) [GET]
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+Completed in 21ms (View: 16, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 18:03:04) [GET]
+  [4;36;1mDefault Load (0.2ms)[0m   [0;1mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;35;1mDefault Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+Completed in 27ms (View: 21, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 18:03:07) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>{"1018350795"=>"0", "281110143"=>"0", "298486374"=>"0", "980190962"=>"0"}}
+  [4;35;1mDefault Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+  [4;36;1mDefault Load (0.3ms)[0m   [0;1mSELECT * FROM `defaults` WHERE (`defaults`.`id` = '281110143') LIMIT 1[0m
+  [4;35;1mDefault Load (0.2ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` = '1018350795') LIMIT 1[0m
+  [4;36;1mDefault Load (0.1ms)[0m   [0;1mSELECT * FROM `defaults` WHERE (`defaults`.`id` = '298486374') LIMIT 1[0m
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` = '980190962') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDefault Destroy (0.2ms)[0m   [0mDELETE FROM `defaults` WHERE `id` = 281110143[0m
+  [4;36;1mSQL (61.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDefault Destroy (0.2ms)[0m   [0;1mDELETE FROM `defaults` WHERE `id` = 1018350795[0m
+  [4;35;1mSQL (32.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDefault Destroy (0.2ms)[0m   [0mDELETE FROM `defaults` WHERE `id` = 298486374[0m
+  [4;36;1mSQL (32.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDefault Destroy (0.2ms)[0m   [0;1mDELETE FROM `defaults` WHERE `id` = 980190962[0m
+  [4;35;1mSQL (21.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/defaults
+Completed in 160ms (DB: 151) | 302 Found [http://localhost/defaults/to_delete]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 18:03:07) [GET]
+  [4;35;1mDefault Load (0.3ms)[0m   [0mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/defaults]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 18:04:02) [GET]
+  [4;35;1mDefault Load (0.3ms)[0m   [0mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+Completed in 25ms (View: 20, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 18:04:05) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>{"1018350795"=>"0", "281110143"=>"0", "298486374"=>"0", "980190962"=>"0", "113629430"=>"0"}}
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+  [4;35;1mDefault Load (0.3ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` = '281110143') LIMIT 1[0m
+  [4;36;1mDefault Load (0.2ms)[0m   [0;1mSELECT * FROM `defaults` WHERE (`defaults`.`id` = '1018350795') LIMIT 1[0m
+  [4;35;1mDefault Load (0.2ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` = '298486374') LIMIT 1[0m
+  [4;36;1mDefault Load (0.2ms)[0m   [0;1mSELECT * FROM `defaults` WHERE (`defaults`.`id` = '980190962') LIMIT 1[0m
+  [4;35;1mDefault Load (0.2ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` = '113629430') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDefault Destroy (0.2ms)[0m   [0mDELETE FROM `defaults` WHERE `id` = 281110143[0m
+  [4;36;1mSQL (39.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDefault Destroy (0.2ms)[0m   [0;1mDELETE FROM `defaults` WHERE `id` = 1018350795[0m
+  [4;35;1mSQL (32.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDefault Destroy (0.3ms)[0m   [0mDELETE FROM `defaults` WHERE `id` = 298486374[0m
+  [4;36;1mSQL (32.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDefault Destroy (0.2ms)[0m   [0;1mDELETE FROM `defaults` WHERE `id` = 980190962[0m
+  [4;35;1mSQL (43.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDefault Destroy (0.2ms)[0m   [0mDELETE FROM `defaults` WHERE `id` = 113629430[0m
+  [4;36;1mSQL (43.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/defaults
+Completed in 205ms (DB: 195) | 302 Found [http://localhost/defaults/to_delete]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 18:04:05) [GET]
+  [4;36;1mDefault Load (0.3ms)[0m   [0;1mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+Completed in 61ms (View: 54, DB: 0) | 200 OK [http://localhost/defaults]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 18:04:32) [GET]
+  [4;36;1mDefault Load (0.3ms)[0m   [0;1mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;35;1mDefault Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+Completed in 27ms (View: 21, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 18:04:34) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>{"1018350795"=>"0", "281110143"=>"0", "298486374"=>"0", "980190962"=>"0", "113629430"=>"0"}}
+  [4;35;1mDefault Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+  [4;36;1mDefault Load (0.3ms)[0m   [0;1mSELECT * FROM `defaults` WHERE (`defaults`.`id` = '281110143') LIMIT 1[0m
+  [4;35;1mDefault Load (0.2ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` = '1018350795') LIMIT 1[0m
+  [4;36;1mDefault Load (0.2ms)[0m   [0;1mSELECT * FROM `defaults` WHERE (`defaults`.`id` = '298486374') LIMIT 1[0m
+  [4;35;1mDefault Load (0.2ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` = '980190962') LIMIT 1[0m
+  [4;36;1mDefault Load (0.2ms)[0m   [0;1mSELECT * FROM `defaults` WHERE (`defaults`.`id` = '113629430') LIMIT 1[0m
+Redirected to http://localhost:3000/defaults
+Completed in 9ms (DB: 2) | 302 Found [http://localhost/defaults/to_delete]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 18:04:34) [GET]
+  [4;36;1mDefault Load (0.1ms)[0m   [0;1mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;35;1mDefault Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+Completed in 28ms (View: 23, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 18:04:53) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>{"1018350795"=>"0", "281110143"=>"0", "298486374"=>"0", "980190962"=>"0", "113629430"=>"0"}}
+  [4;35;1mDefault Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+  [4;36;1mDefault Load (0.1ms)[0m   [0;1mSELECT * FROM `defaults` WHERE (`defaults`.`id` = '281110143') LIMIT 1[0m
+
+NoMethodError (undefined method `i' for #<DefaultsController:0x7f69846cd3c0>):
+  app/controllers/defaults_controller.rb:87:in `to_delete'
+  app/controllers/defaults_controller.rb:87:in `each'
+  app/controllers/defaults_controller.rb:87:in `map'
+  app/controllers/defaults_controller.rb:87:in `to_delete'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (81.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 18:05:00) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>{"1018350795"=>"0", "281110143"=>"0", "298486374"=>"0", "980190962"=>"0", "113629430"=>"0"}}
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` = '281110143') LIMIT 1[0m
+  [4;36;1mDefault Load (0.1ms)[0m   [0;1mSELECT * FROM `defaults` WHERE (`defaults`.`id` = '1018350795') LIMIT 1[0m
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` = '298486374') LIMIT 1[0m
+  [4;36;1mDefault Load (0.1ms)[0m   [0;1mSELECT * FROM `defaults` WHERE (`defaults`.`id` = '980190962') LIMIT 1[0m
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` = '113629430') LIMIT 1[0m
+Redirected to http://localhost:3000/defaults
+Completed in 10ms (DB: 1) | 302 Found [http://localhost/defaults/to_delete]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 18:05:00) [GET]
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;36;1mDefault Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+Completed in 29ms (View: 24, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 18:05:21) [GET]
+  [4;36;1mDefault Load (0.2ms)[0m   [0;1mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;35;1mDefault Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+Completed in 25ms (View: 21, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 18:05:23) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>{"1018350795"=>"0", "281110143"=>"0", "298486374"=>"0", "980190962"=>"0", "113629430"=>"0"}}
+  [4;35;1mDefault Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+  [4;36;1mDefault Load (0.1ms)[0m   [0;1mSELECT * FROM `defaults` WHERE (`defaults`.`id` = '281110143') LIMIT 1[0m
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` = '1018350795') LIMIT 1[0m
+  [4;36;1mDefault Load (0.1ms)[0m   [0;1mSELECT * FROM `defaults` WHERE (`defaults`.`id` = '298486374') LIMIT 1[0m
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` = '980190962') LIMIT 1[0m
+  [4;36;1mDefault Load (0.1ms)[0m   [0;1mSELECT * FROM `defaults` WHERE (`defaults`.`id` = '113629430') LIMIT 1[0m
+Redirected to http://localhost:3000/defaults
+Completed in 8ms (DB: 1) | 302 Found [http://localhost/defaults/to_delete]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 18:05:23) [GET]
+  [4;36;1mDefault Load (0.1ms)[0m   [0;1mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;35;1mDefault Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+Completed in 79ms (View: 74, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 18:07:10) [GET]
+  [4;35;1mDefault Load (0.2ms)[0m   [0mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+Completed in 26ms (View: 21, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 18:07:11) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>{"1018350795"=>"0", "281110143"=>"0", "298486374"=>"0", "980190962"=>"0", "113629430"=>"0"}}
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+  [4;35;1mDefault Load (0.3ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` = 281110143) [0m
+  [4;36;1mDefault Load (0.3ms)[0m   [0;1mSELECT * FROM `defaults` WHERE (`defaults`.`id` = 1018350795) [0m
+  [4;35;1mDefault Load (0.2ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` = 298486374) [0m
+  [4;36;1mDefault Load (0.2ms)[0m   [0;1mSELECT * FROM `defaults` WHERE (`defaults`.`id` = 980190962) [0m
+  [4;35;1mDefault Load (0.2ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` = 113629430) [0m
+Redirected to http://localhost:3000/defaults
+Completed in 9ms (DB: 2) | 302 Found [http://localhost/defaults/to_delete]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 18:07:11) [GET]
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+Completed in 29ms (View: 24, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 18:07:23) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>{"1018350795"=>"0", "281110143"=>"0", "298486374"=>"0", "980190962"=>"0", "113629430"=>"0"}}
+Redirected to http://localhost:3000/defaults
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/defaults/to_delete]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 18:07:23) [GET]
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;36;1mDefault Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+Completed in 28ms (View: 22, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 18:07:33) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>{"1018350795"=>"0", "281110143"=>"0", "298486374"=>"0", "980190962"=>"0", "113629430"=>"1"}}
+Redirected to http://localhost:3000/defaults
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/defaults/to_delete]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 18:07:33) [GET]
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+Completed in 30ms (View: 24, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 18:08:03) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>{"1018350795"=>"0", "281110143"=>"0", "298486374"=>"0", "980190962"=>"0", "113629430"=>"0"}}
+Redirected to http://localhost:3000/defaults
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/defaults/to_delete]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 18:08:03) [GET]
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+Completed in 26ms (View: 21, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 18:08:26) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>{"1018350795"=>"0", "281110143"=>"1", "298486374"=>"1", "980190962"=>"0", "113629430"=>"0"}}
+Redirected to http://localhost:3000/defaults
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/defaults/to_delete]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 18:08:26) [GET]
+  [4;35;1mDefault Load (0.2ms)[0m   [0mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;36;1mDefault Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+Completed in 28ms (View: 22, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 18:09:22) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>{"1018350795"=>"0", "281110143"=>"0", "298486374"=>"0", "980190962"=>"0", "113629430"=>"0"}}
+Redirected to http://localhost:3000/defaults
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/defaults/to_delete]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 18:09:22) [GET]
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+Completed in 29ms (View: 24, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 18:09:48) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>{"1018350795"=>"0", "281110143"=>"1", "298486374"=>"0", "980190962"=>"0", "113629430"=>"1"}}
+Redirected to http://localhost:3000/defaults
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/defaults/to_delete]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 18:09:48) [GET]
+  [4;35;1mDefault Load (0.2ms)[0m   [0mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;36;1mDefault Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+Completed in 28ms (View: 22, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 18:10:22) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>{"1018350795"=>"0", "281110143"=>"0", "298486374"=>"1", "980190962"=>"1", "113629430"=>"0"}}
+Redirected to http://localhost:3000/defaults
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/defaults/to_delete]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 18:10:22) [GET]
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+Completed in 79ms (View: 73, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 18:10:57) [GET]
+  [4;36;1mDefault Load (0.1ms)[0m   [0;1mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;35;1mDefault Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+Completed in 31ms (View: 25, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 18:11:07) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>{"1018350795"=>"0", "281110143"=>"0", "298486374"=>"0", "980190962"=>"0", "113629430"=>"1"}}
+
+NoMethodError (undefined method `collect!' for #<HashWithIndifferentAccess:0x7f698262e790>):
+  app/controllers/defaults_controller.rb:87:in `to_delete'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (26.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 18:11:57) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>{"1018350795"=>"0", "281110143"=>"0", "298486374"=>"0", "980190962"=>"0", "113629430"=>"1"}}
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+  [4;35;1mDefault Load (0.2ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Default with ID=0):
+  app/controllers/defaults_controller.rb:88:in `to_delete'
+  app/controllers/defaults_controller.rb:87:in `each'
+  app/controllers/defaults_controller.rb:87:in `to_delete'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (85.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 18:12:28) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>{"1018350795"=>"0", "281110143"=>"0", "298486374"=>"0", "980190962"=>"0", "113629430"=>"1"}}
+Redirected to http://localhost:3000/defaults
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/defaults/to_delete]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 18:12:28) [GET]
+  [4;36;1mDefault Load (0.1ms)[0m   [0;1mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;35;1mDefault Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+Completed in 30ms (View: 24, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 18:12:53) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>{"1018350795"=>"0", "281110143"=>"0", "298486374"=>"0", "980190962"=>"0", "113629430"=>"0"}}
+Redirected to http://localhost:3000/defaults
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/defaults/to_delete]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 18:12:53) [GET]
+  [4;36;1mDefault Load (0.1ms)[0m   [0;1mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;35;1mDefault Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+Completed in 29ms (View: 24, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 18:13:03) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>{"1018350795"=>"0", "281110143"=>"0", "298486374"=>"0", "980190962"=>"0", "113629430"=>"0"}}
+Redirected to http://localhost:3000/defaults
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/defaults/to_delete]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 18:13:03) [GET]
+  [4;36;1mDefault Load (0.2ms)[0m   [0;1mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;35;1mDefault Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+Completed in 81ms (View: 74, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 18:13:33) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>{"1018350795"=>"0", "281110143"=>"0", "298486374"=>"0", "980190962"=>"0", "113629430"=>"0"}}
+  [4;35;1mDefault Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+  [4;36;1mDefault Load (0.1ms)[0m   [0;1mSELECT * FROM `defaults` WHERE (`defaults`.`id` = 281110143) [0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.<<):
+  app/controllers/defaults_controller.rb:88:in `to_delete'
+  app/controllers/defaults_controller.rb:87:in `each'
+  app/controllers/defaults_controller.rb:87:in `map'
+  app/controllers/defaults_controller.rb:87:in `to_delete'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (29.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 18:13:59) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>{"1018350795"=>"0", "281110143"=>"0", "298486374"=>"0", "980190962"=>"0", "113629430"=>"0"}}
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` = 281110143) [0m
+  [4;36;1mDefault Load (0.1ms)[0m   [0;1mSELECT * FROM `defaults` WHERE (`defaults`.`id` = 1018350795) [0m
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` = 298486374) [0m
+  [4;36;1mDefault Load (0.1ms)[0m   [0;1mSELECT * FROM `defaults` WHERE (`defaults`.`id` = 980190962) [0m
+  [4;35;1mDefault Load (0.0ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` = 113629430) [0m
+Redirected to http://localhost:3000/defaults
+Completed in 9ms (DB: 1) | 302 Found [http://localhost/defaults/to_delete]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 18:13:59) [GET]
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+Completed in 29ms (View: 24, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 18:14:25) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>{"1018350795"=>"0", "281110143"=>"0", "298486374"=>"0", "980190962"=>"0", "113629430"=>"0"}}
+  [4;36;1mDefault Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` = 281110143) [0m
+  [4;36;1mDefault Load (0.1ms)[0m   [0;1mSELECT * FROM `defaults` WHERE (`defaults`.`id` = 1018350795) [0m
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` = 298486374) [0m
+  [4;36;1mDefault Load (0.1ms)[0m   [0;1mSELECT * FROM `defaults` WHERE (`defaults`.`id` = 980190962) [0m
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` = 113629430) [0m
+Redirected to http://localhost:3000/defaults
+Completed in 8ms (DB: 1) | 302 Found [http://localhost/defaults/to_delete]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 18:14:25) [GET]
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+Completed in 84ms (View: 21, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 18:14:33) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>{"1018350795"=>"0", "281110143"=>"0", "298486374"=>"0", "980190962"=>"0", "113629430"=>"0"}}
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` = 281110143) [0m
+  [4;36;1mDefault Load (0.1ms)[0m   [0;1mSELECT * FROM `defaults` WHERE (`defaults`.`id` = 1018350795) [0m
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` = 298486374) [0m
+  [4;36;1mDefault Load (0.1ms)[0m   [0;1mSELECT * FROM `defaults` WHERE (`defaults`.`id` = 980190962) [0m
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` = 113629430) [0m
+Redirected to http://localhost:3000/defaults
+Completed in 8ms (DB: 1) | 302 Found [http://localhost/defaults/to_delete]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 18:14:33) [GET]
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+Completed in 29ms (View: 24, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 18:15:00) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>{"1018350795"=>"0", "281110143"=>"0", "298486374"=>"0", "980190962"=>"0", "113629430"=>"0"}}
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` = 281110143) [0m
+  [4;36;1mDefault Load (0.1ms)[0m   [0;1mSELECT * FROM `defaults` WHERE (`defaults`.`id` = 1018350795) [0m
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` = 298486374) [0m
+  [4;36;1mDefault Load (0.1ms)[0m   [0;1mSELECT * FROM `defaults` WHERE (`defaults`.`id` = 980190962) [0m
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` = 113629430) [0m
+Redirected to http://localhost:3000/defaults
+Completed in 8ms (DB: 1) | 302 Found [http://localhost/defaults/to_delete]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 18:15:00) [GET]
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+Completed in 29ms (View: 24, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 18:15:11) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>{"1018350795"=>"0", "281110143"=>"0", "298486374"=>"0", "980190962"=>"0", "113629430"=>"0"}}
+Redirected to http://localhost:3000/defaults
+Completed in 52ms (DB: 0) | 302 Found [http://localhost/defaults/to_delete]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 18:15:11) [GET]
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+Completed in 34ms (View: 28, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 18:15:50) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>{"1018350795"=>"0", "281110143"=>"0", "298486374"=>"0", "980190962"=>"0", "113629430"=>"0"}}
+Redirected to http://localhost:3000/defaults
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/defaults/to_delete]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 18:15:50) [GET]
+  [4;35;1mDefault Load (0.2ms)[0m   [0mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;36;1mDefault Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+Completed in 28ms (View: 23, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 18:15:58) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>{"1018350795"=>"0", "281110143"=>"0", "298486374"=>"0", "980190962"=>"0", "113629430"=>"1"}}
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` = 113629430) [0m
+Redirected to http://localhost:3000/defaults
+Completed in 6ms (DB: 1) | 302 Found [http://localhost/defaults/to_delete]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 18:15:58) [GET]
+  [4;35;1mDefault Load (0.1ms)[0m   [0mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+Completed in 28ms (View: 23, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 18:16:32) [GET]
+  [4;36;1mDefault Load (0.1ms)[0m   [0;1mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;35;1mDefault Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+Completed in 31ms (View: 25, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 18:16:35) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>{"1018350795"=>"0", "281110143"=>"1", "298486374"=>"0", "980190962"=>"0", "113629430"=>"0"}}
+  [4;35;1mDefault Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+  [4;36;1mDefault Load (0.1ms)[0m   [0;1mSELECT * FROM `defaults` WHERE (`defaults`.`id` = 281110143) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDefault Destroy (0.3ms)[0m   [0;1mDELETE FROM `defaults` WHERE `id` = 281110143[0m
+  [4;35;1mSQL (55.9ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/defaults
+Completed in 62ms (DB: 57) | 302 Found [http://localhost/defaults/to_delete]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 18:16:35) [GET]
+  [4;35;1mDefault Load (0.3ms)[0m   [0mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;36;1mDefault Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+Completed in 30ms (View: 20, DB: 1) | 200 OK [http://localhost/defaults]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#to_delete (for 127.0.0.1 at 2010-10-19 18:16:37) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"G18APnTJbbm3g2nY7pM4gC8h9PRFEwVoWNPwTi36yP8=", "to_delete"=>{"1018350795"=>"1", "298486374"=>"0", "980190962"=>"0", "113629430"=>"0"}}
+  [4;36;1mDefault Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `defaults`[0m
+  [4;35;1mDefault Load (0.2ms)[0m   [0mSELECT * FROM `defaults` WHERE (`defaults`.`id` = 1018350795) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDefault Destroy (0.2ms)[0m   [0mDELETE FROM `defaults` WHERE `id` = 1018350795[0m
+  [4;36;1mSQL (58.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/defaults
+Completed in 65ms (DB: 59) | 302 Found [http://localhost/defaults/to_delete]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DefaultsController#index (for 127.0.0.1 at 2010-10-19 18:16:37) [GET]
+  [4;36;1mDefault Load (0.3ms)[0m   [0;1mSELECT * FROM `defaults` [0m
+Rendering template within layouts/defaults
+Rendering defaults/index
+  [4;35;1mDefault Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `defaults`[0m
+Completed in 29ms (View: 16, DB: 1) | 200 OK [http://localhost/defaults]

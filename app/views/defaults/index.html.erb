@@ -1,0 +1,22 @@
+<h1>Listing defaults</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+<% form_for :to_delete, :url => {:action => :to_delete} do |d| %>
+<% @defaults.each do |default| %>
+  <tr>
+    <td><%= d.check_box default.id %></td>
+    <td><%= d.label default.id, default.name %></td>
+    <td><%= link_to 'Show', default %></td>
+    <td><%= link_to 'Edit', edit_default_path(default) %></td>
+    <td><%= link_to 'Destroy', default, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<%= d.submit %>
+<%end%>
+<br />
+
+<%= link_to 'New default', new_default_path %>

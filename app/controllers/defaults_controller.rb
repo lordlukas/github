@@ -75,6 +75,25 @@ a
     end
   end
 
+  asba
+  d
+
+  y
+  ba
+  db
+  f
+
+  b
+  f
+  dfb
+
+  agdfb
+  cx
+  f
+  dy
+  d
+  cn
+  vs
   # PUT /defaults/1
   # PUT /defaults/1.xml
   def update
@@ -109,6 +128,21 @@ end
       format.xml  { head :ok }
     end
   end
+  # tady nečo je
+  ads
+  dsa
+
+  acb
+  y
+  badf
+  b
+
+  ts
+  h
+  d
+  b
+  adf
+
 
   def to_delete
     default = params[:to_delete].map {|i,k| ( Default.find(i) if k != "0" )}

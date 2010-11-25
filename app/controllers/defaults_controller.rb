@@ -109,7 +109,8 @@ end
       format.xml  { head :ok }
     end
   end
-
+# tady je neco navíc
+a tady tak a a akatkakvksdkafdvasd
   def to_delete
     default = params[:to_delete].map {|i,k| ( Default.find(i) if k != "0" )}
     default.delete(nil)
